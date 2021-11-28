@@ -18,6 +18,6 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
-/test.csv
-/test.xlsx
-/test.json
+/tests/Command/test.csv
+/tests/Command/test.json
+/tests/Command/test.xlsx

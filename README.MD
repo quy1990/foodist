@@ -1,11 +1,19 @@
-convert to csv:
+## Clone project
+    git clone https://github.com/quy1990/foodist && cd foodist/
 
-    php bin/console app:convert ./test.xmlData csv
+## Install composer:
 
-convert to excel:
+    composer install
 
-    php bin/console app:convert ./test.xmlData excel
+## Convert
+### convert to csv:
 
-convert to json:
+    php bin/console app:convert tests\Command\test.xml csv
 
-    php bin/console app:convert ./test.xmlData json
+## convert to excel:
+
+    php bin/console app:convert tests\Command\test.xml excel
+
+## convert to json:
+
+    php bin/console app:convert tests\Command\test.xml json

@@ -23,7 +23,7 @@ class ConvertCommandTest extends KernelTestCase
     public function test_convert_xml_to_csv()
     {
         $this->convertCommand->execute([
-            'path' => './test.xml',
+            'path' => dirname(__FILE__) . '/test.xml',
             'type' => 'csv',
         ]);
         $this->assertStringContainsString('done', $this->convertCommand->getDisplay());
@@ -32,7 +32,7 @@ class ConvertCommandTest extends KernelTestCase
     public function test_convert_xml_to_excel()
     {
         $this->convertCommand->execute([
-            'path' => './test.xml',
+            'path' => dirname(__FILE__) . '/test.xml',
             'type' => 'excel',
         ]);
         $this->assertStringContainsString('done', $this->convertCommand->getDisplay());
@@ -41,7 +41,7 @@ class ConvertCommandTest extends KernelTestCase
     public function test_convert_xml_to_json()
     {
         $this->convertCommand->execute([
-            'path' => './test.xml',
+            'path' => dirname(__FILE__) . '/test.xml',
             'type' => 'json',
         ]);
 
@@ -52,7 +52,7 @@ class ConvertCommandTest extends KernelTestCase
     {
         $this->expectException(Exception::class);
         $this->convertCommand->execute([
-            'path' => './test.xml',
+            'path' => dirname(__FILE__) . '/test.xml',
             'type' => 'doc',
         ]);
     }
